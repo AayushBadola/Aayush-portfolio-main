@@ -8,7 +8,16 @@ export interface Project {
   live?: string;
   gradient: string;
   featured: boolean;
-  category: 'ML/AI' | 'Systems' | 'Web' | 'Game';
+  category: 'ML/AI' | 'Systems' | 'Web' | 'Game' | 'Backend';
+}
+
+export interface Article {
+  id: string;
+  title: string;
+  description: string;
+  url: string;
+  date: string;
+  gradient: string;
 }
 
 export const projects: Project[] = [
@@ -40,6 +49,16 @@ export const projects: Project[] = [
     github: 'https://github.com/AayushBadola/Exo-Planet-Detection',
     gradient: 'from-blue-500 to-cyan-500',
     featured: true,
+    category: 'ML/AI'
+  },
+  {
+    id: 'anomaly-detector',
+    title: 'Anomaly Detector',
+    description: "It's designed to ingest data from various sources (like application metrics, sensor readings, event counts), process it efficiently using asyncio, apply statistical anomaly detection algorithms over sliding windows, and trigger configurable actions (like logging or sending webhooks) when anomalies are found.",
+    tech: ['Python', 'Asyncio', 'Statistical Analysis', 'Real-time Processing', 'Webhooks'],
+    github: 'https://github.com/AayushBadola/Anomaly-Detection',
+    gradient: 'from-red-500 to-orange-500',
+    featured: false,
     category: 'ML/AI'
   },
   {
@@ -83,6 +102,16 @@ export const projects: Project[] = [
     category: 'Systems'
   },
   {
+    id: 'task-manager',
+    title: 'Task Manager Using Python',
+    description: 'A task management application built with Python',
+    tech: ['Python', 'Task Management', 'CLI'],
+    github: 'https://github.com/AayushBadola/TaskManager',
+    gradient: 'from-slate-500 to-gray-500',
+    featured: false,
+    category: 'Backend'
+  },
+  {
     id: 'web-assistant',
     title: 'Web Assistant',
     description: 'A virtual speech assistant',
@@ -91,26 +120,6 @@ export const projects: Project[] = [
     gradient: 'from-pink-500 to-rose-500',
     featured: false,
     category: 'Web'
-  },
-  {
-    id: 'anomaly-detector',
-    title: 'Anomaly Detector',
-    description: "It's designed to ingest data from various sources (like application metrics, sensor readings, event counts), process it efficiently using asyncio, apply statistical anomaly detection algorithms over sliding windows, and trigger configurable actions (like logging or sending webhooks) when anomalies are found.",
-    tech: ['Python', 'Asyncio', 'Statistical Analysis', 'Real-time Processing', 'Webhooks'],
-    github: 'https://github.com/AayushBadola/Anomaly-Detection',
-    gradient: 'from-red-500 to-orange-500',
-    featured: false,
-    category: 'ML/AI'
-  },
-  {
-    id: 'task-manager',
-    title: 'Task Manager Using Python',
-    description: 'A task management application built with Python',
-    tech: ['Python', 'Task Management', 'CLI'],
-    github: 'https://github.com/AayushBadola/TaskManager',
-    gradient: 'from-slate-500 to-gray-500',
-    featured: false,
-    category: 'Systems'
   },
   {
     id: 'nba-game',
@@ -124,5 +133,53 @@ export const projects: Project[] = [
   }
 ];
 
+export const articles: Article[] = [
+  {
+    id: 'self-supervised-learning',
+    title: 'Harnessing Intrinsic Structure: The Self-Supervised Learning Revolution',
+    description: 'Exploring the revolutionary approach of self-supervised learning and its impact on modern AI systems.',
+    url: 'https://medium.com/@aayush.badola2/harnessing-intrinsic-structure-the-self-supervised-learning-revolution-9d96cd012b50',
+    date: '2024',
+    gradient: 'from-green-400 to-blue-500'
+  },
+  {
+    id: 'transparently-complex-ai',
+    title: 'Beyond the Trade-off: Transparently Complex AI',
+    description: 'Examining the balance between AI complexity and transparency in modern machine learning systems.',
+    url: 'https://medium.com/@aayush.badola2/beyond-the-trade-off-transparently-complex-ai-89b955853673',
+    date: '2024',
+    gradient: 'from-purple-400 to-pink-500'
+  },
+  {
+    id: 'particles-cosmos',
+    title: 'Particles of Cosmos: From Python to Trinity',
+    description: 'A deep dive into computational physics and the intersection of programming with cosmic phenomena.',
+    url: 'https://medium.com/@aayush.badola2/particles-of-cosmos-from-trinity-to-python-06d49b6df773',
+    date: '2024',
+    gradient: 'from-blue-400 to-purple-500'
+  },
+  {
+    id: 'silicon-mind',
+    title: 'Silicon Mind: The Technical Chasm of ANN Brain Replacement',
+    description: 'Analyzing the technical challenges and possibilities of artificial neural networks replacing biological brain functions.',
+    url: 'https://medium.com/@aayush.badola2/silicon-mind-the-technical-chasm-of-ann-brain-replacement-3b175c9114c4',
+    date: '2024',
+    gradient: 'from-cyan-400 to-green-500'
+  },
+  {
+    id: 'deepseek-llm',
+    title: 'DeepSeek LLM Architecture Explained',
+    description: 'Technical breakdown of the DeepSeek LLM architecture and its innovative approaches to language modeling.',
+    url: 'https://medium.com/@aayush.badola2/deepseek-llm-architecture-explained-f945972c0a96',
+    date: '2024',
+    gradient: 'from-red-400 to-orange-500'
+  }
+];
+
 export const featuredProjects = projects.filter(p => p.featured);
 export const otherProjects = projects.filter(p => !p.featured);
+
+export const getProjectsByCategory = (category: string) => {
+  if (category === 'All') return projects;
+  return projects.filter(p => p.category === category);
+};
