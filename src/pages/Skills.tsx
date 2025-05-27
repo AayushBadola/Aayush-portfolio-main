@@ -2,30 +2,47 @@
 const Skills = () => {
   const skillCategories = [
     {
-      title: "Frontend",
+      title: "Programming Languages",
       skills: [
-        { name: "React", level: 95, color: "from-blue-500 to-cyan-500" },
-        { name: "TypeScript", level: 90, color: "from-blue-600 to-blue-400" },
-        { name: "Vue.js", level: 80, color: "from-green-500 to-green-400" },
-        { name: "Tailwind CSS", level: 92, color: "from-teal-500 to-teal-400" },
+        { name: "Python", level: 95, color: "from-yellow-500 to-yellow-400" },
+        { name: "Java", level: 85, color: "from-orange-500 to-red-500" },
+        { name: "C++", level: 90, color: "from-blue-600 to-blue-400" },
+        { name: "C", level: 88, color: "from-gray-600 to-gray-400" },
+        { name: "JavaScript", level: 80, color: "from-yellow-400 to-orange-400" },
+        { name: "SQL", level: 85, color: "from-blue-500 to-cyan-500" },
       ]
     },
     {
-      title: "Backend",
+      title: "Machine Learning & AI",
       skills: [
-        { name: "Node.js", level: 85, color: "from-green-500 to-green-400" },
-        { name: "Python", level: 80, color: "from-yellow-500 to-yellow-400" },
-        { name: "Express.js", level: 88, color: "from-gray-600 to-gray-500" },
+        { name: "Machine Learning", level: 92, color: "from-green-500 to-green-400" },
+        { name: "Deep Learning", level: 90, color: "from-purple-500 to-purple-400" },
+        { name: "Data Science", level: 88, color: "from-cyan-500 to-blue-500" },
+        { name: "TensorFlow", level: 85, color: "from-orange-500 to-orange-400" },
+        { name: "Keras", level: 83, color: "from-red-500 to-red-400" },
+        { name: "Computer Vision", level: 80, color: "from-indigo-500 to-purple-500" },
+      ]
+    },
+    {
+      title: "Web Technologies",
+      skills: [
+        { name: "HTML", level: 90, color: "from-orange-600 to-orange-500" },
+        { name: "CSS", level: 85, color: "from-blue-600 to-blue-500" },
         { name: "GraphQL", level: 75, color: "from-pink-500 to-pink-400" },
+        { name: "React", level: 80, color: "from-cyan-400 to-blue-400" },
+        { name: "Node.js", level: 78, color: "from-green-600 to-green-500" },
+        { name: "REST APIs", level: 82, color: "from-teal-500 to-teal-400" },
       ]
     },
     {
-      title: "Database & DevOps",
+      title: "Databases & Tools",
       skills: [
-        { name: "MongoDB", level: 85, color: "from-green-600 to-green-500" },
-        { name: "PostgreSQL", level: 80, color: "from-blue-700 to-blue-600" },
+        { name: "MySQL", level: 88, color: "from-blue-700 to-blue-600" },
+        { name: "PostgreSQL", level: 85, color: "from-blue-600 to-blue-500" },
+        { name: "Git", level: 90, color: "from-orange-600 to-red-600" },
         { name: "Docker", level: 75, color: "from-blue-500 to-blue-400" },
-        { name: "AWS", level: 70, color: "from-orange-500 to-orange-400" },
+        { name: "Linux", level: 80, color: "from-yellow-600 to-yellow-500" },
+        { name: "System Design", level: 78, color: "from-gray-600 to-gray-500" },
       ]
     }
   ];

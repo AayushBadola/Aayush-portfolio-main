@@ -3,10 +3,10 @@ import { Award, Code, Coffee, Users } from "lucide-react";
 
 const About = () => {
   const stats = [
-    { icon: Code, label: "Projects Completed", value: "50+", color: "text-purple-400" },
-    { icon: Coffee, label: "Years Experience", value: "3+", color: "text-pink-400" },
-    { icon: Users, label: "Happy Clients", value: "25+", color: "text-blue-400" },
-    { icon: Award, label: "Technologies", value: "15+", color: "text-cyan-400" },
+    { icon: Code, label: "Projects Completed", value: "10+", color: "text-purple-400" },
+    { icon: Coffee, label: "Years Learning", value: "3+", color: "text-pink-400" },
+    { icon: Users, label: "Technologies", value: "15+", color: "text-blue-400" },
+    { icon: Award, label: "Articles Written", value: "5+", color: "text-cyan-400" },
   ];
 
   return (
@@ -24,20 +24,19 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-fade-in-up delay-300">
             <p className="text-lg text-gray-300 leading-relaxed">
-              Hello! I'm Aayush, a passionate full-stack developer with a love for creating 
-              beautiful and functional web applications. I specialize in modern JavaScript 
-              frameworks and have a keen eye for design.
+              Hello! I'm Aayush Badola, a passionate B.Tech CSE student specializing in Backend Development, 
+              Machine Learning, Deep Learning, and System Design. I love creating intelligent solutions 
+              that solve real-world problems using cutting-edge technologies.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
-              With over 3 years of experience in web development, I've worked on various 
-              projects ranging from e-commerce platforms to complex web applications. 
-              I believe in writing clean, maintainable code and creating user experiences 
-              that delight and engage.
+              My journey in computer science has led me to work on diverse projects ranging from 
+              medical image classification using CNNs to exoplanet detection with machine learning algorithms. 
+              I believe in writing clean, efficient code and building systems that are both scalable and maintainable.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
-              When I'm not coding, you can find me exploring new technologies, contributing 
-              to open-source projects, or enjoying a good cup of coffee while reading about 
-              the latest trends in web development.
+              When I'm not coding, you can find me exploring new ML architectures, contributing 
+              to open-source projects, writing technical articles on Medium, or diving deep into 
+              system design concepts and backend architectures.
             </p>
           </div>
           

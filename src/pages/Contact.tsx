@@ -1,5 +1,5 @@
 
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send } from "lucide-react";
+import { Mail, MapPin, Github, Linkedin, FileText, Send } from "lucide-react";
 import { useState } from "react";
 
 const Contact = () => {
@@ -9,10 +9,34 @@ const Contact = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission here
+    setIsSubmitting(true);
+    
+    try {
+      // Create mailto link with form data
+      const subject = encodeURIComponent(`Portfolio Contact: ${formData.name}`);
+      const body = encodeURIComponent(`
+Name: ${formData.name}
+Email: ${formData.email}
+
+Message:
+${formData.message}
+      `);
+      
+      const mailtoLink = `mailto:aayush.badola2@gmail.com?subject=${subject}&body=${body}`;
+      window.location.href = mailtoLink;
+      
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -33,7 +57,7 @@ const Contact = () => {
           </h1>
           <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full"></div>
           <p className="mt-6 text-lg text-gray-400 max-w-2xl mx-auto">
-            I'm always open to discussing new opportunities and interesting projects. 
+            I'm always open to discussing new opportunities, interesting projects, and collaborations. 
             Let's create something amazing together!
           </p>
         </div>
@@ -44,15 +68,7 @@ const Contact = () => {
               <Mail className="h-6 w-6 text-purple-400" />
               <div>
                 <h3 className="text-lg font-semibold text-white">Email</h3>
-                <p className="text-gray-400">aayush@example.com</p>
-              </div>
-            </div>
-            
-            <div className="flex items-center space-x-4 p-6 bg-gradient-to-r from-purple-900/20 to-pink-900/20 rounded-lg border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 hover:transform hover:scale-105">
-              <Phone className="h-6 w-6 text-purple-400" />
-              <div>
-                <h3 className="text-lg font-semibold text-white">Phone</h3>
-                <p className="text-gray-400">+1 (555) 123-4567</p>
+                <p className="text-gray-400">aayush.badola2@gmail.com</p>
               </div>
             </div>
             
@@ -60,27 +76,54 @@ const Contact = () => {
               <MapPin className="h-6 w-6 text-purple-400" />
               <div>
                 <h3 className="text-lg font-semibold text-white">Location</h3>
-                <p className="text-gray-400">San Francisco, CA</p>
+                <p className="text-gray-400">New Delhi, India</p>
               </div>
             </div>
             
             <div className="pt-6">
-              <h3 className="text-lg font-semibold text-white mb-4">Follow Me</h3>
+              <h3 className="text-lg font-semibold text-white mb-4">Connect With Me</h3>
               <div className="flex space-x-4">
-                <a href="#" className="group p-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-110">
+                <a 
+                  href="https://github.com/AayushBadola" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group p-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-110"
+                >
                   <Github className="h-6 w-6 text-white group-hover:rotate-12 transition-transform" />
                 </a>
-                <a href="#" className="group p-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-110">
+                <a 
+                  href="https://www.linkedin.com/in/aayushbadola/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group p-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-110"
+                >
                   <Linkedin className="h-6 w-6 text-white group-hover:rotate-12 transition-transform" />
                 </a>
-                <a href="#" className="group p-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-110">
-                  <Twitter className="h-6 w-6 text-white group-hover:rotate-12 transition-transform" />
+                <a 
+                  href="https://medium.com/@aayush.badola2" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group p-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-110"
+                >
+                  <FileText className="h-6 w-6 text-white group-hover:rotate-12 transition-transform" />
                 </a>
               </div>
             </div>
           </div>
           
           <form onSubmit={handleSubmit} className="space-y-6 animate-fade-in-up delay-500">
+            {submitStatus === 'success' && (
+              <div className="p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-400">
+                Your email client should open with the message. If not, please email me directly!
+              </div>
+            )}
+            
+            {submitStatus === 'error' && (
+              <div className="p-4 bg-red-500/20 border border-red-500/50 rounded-lg text-red-400">
+                Something went wrong. Please email me directly at aayush.badola2@gmail.com
+              </div>
+            )}
+            
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                 Name
@@ -124,18 +167,23 @@ const Contact = () => {
                 value={formData.message}
                 onChange={handleChange}
                 className="w-full px-4 py-3 bg-gray-900/50 border border-gray-700 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-white placeholder-gray-400 resize-none transition-all duration-300 hover:border-purple-500/50"
-                placeholder="Tell me about your project..."
+                placeholder="Tell me about your project or opportunity..."
                 required
               ></textarea>
             </div>
             
             <button
               type="submit"
-              className="group w-full px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg text-white font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+              disabled={isSubmitting}
+              className="group w-full px-8 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg text-white font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Send Message
+              {isSubmitting ? 'Opening Email Client...' : 'Send Message'}
               <Send className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </button>
+            
+            <p className="text-sm text-gray-500 text-center">
+              This will open your email client with the message pre-filled
+            </p>
           </form>
         </div>
       </div>

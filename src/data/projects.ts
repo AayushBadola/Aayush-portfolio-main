@@ -139,7 +139,7 @@ export const articles: Article[] = [
     title: 'Harnessing Intrinsic Structure: The Self-Supervised Learning Revolution',
     description: 'Exploring the revolutionary approach of self-supervised learning and its impact on modern AI systems.',
     url: 'https://medium.com/@aayush.badola2/harnessing-intrinsic-structure-the-self-supervised-learning-revolution-9d96cd012b50',
-    date: '2024',
+    date: '2025',
     gradient: 'from-green-400 to-blue-500'
   },
   {
@@ -147,7 +147,7 @@ export const articles: Article[] = [
     title: 'Beyond the Trade-off: Transparently Complex AI',
     description: 'Examining the balance between AI complexity and transparency in modern machine learning systems.',
     url: 'https://medium.com/@aayush.badola2/beyond-the-trade-off-transparently-complex-ai-89b955853673',
-    date: '2024',
+    date: '2025',
     gradient: 'from-purple-400 to-pink-500'
   },
   {
@@ -155,7 +155,7 @@ export const articles: Article[] = [
     title: 'Particles of Cosmos: From Python to Trinity',
     description: 'A deep dive into computational physics and the intersection of programming with cosmic phenomena.',
     url: 'https://medium.com/@aayush.badola2/particles-of-cosmos-from-trinity-to-python-06d49b6df773',
-    date: '2024',
+    date: '2025',
     gradient: 'from-blue-400 to-purple-500'
   },
   {
@@ -163,7 +163,7 @@ export const articles: Article[] = [
     title: 'Silicon Mind: The Technical Chasm of ANN Brain Replacement',
     description: 'Analyzing the technical challenges and possibilities of artificial neural networks replacing biological brain functions.',
     url: 'https://medium.com/@aayush.badola2/silicon-mind-the-technical-chasm-of-ann-brain-replacement-3b175c9114c4',
-    date: '2024',
+    date: '2025',
     gradient: 'from-cyan-400 to-green-500'
   },
   {
@@ -171,7 +171,7 @@ export const articles: Article[] = [
     title: 'DeepSeek LLM Architecture Explained',
     description: 'Technical breakdown of the DeepSeek LLM architecture and its innovative approaches to language modeling.',
     url: 'https://medium.com/@aayush.badola2/deepseek-llm-architecture-explained-f945972c0a96',
-    date: '2024',
+    date: '2025',
     gradient: 'from-red-400 to-orange-500'
   }
 ];

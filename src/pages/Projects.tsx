@@ -92,6 +92,7 @@ const Projects = () => {
                   key={project.id} 
                   className="group relative bg-gray-900/80 border border-green-500/30 rounded-xl overflow-hidden hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20 animate-fade-in-up cursor-pointer"
                   style={{ animationDelay: `${index * 100}ms` }}
+                  onClick={() => window.open(project.github, '_blank')}
                 >
                   <div className="absolute top-2 right-2 z-10 flex items-center gap-1 text-xs font-mono text-green-400">
                     {getCategoryIcon(project.category)}
@@ -126,12 +127,24 @@ const Projects = () => {
                     </div>
                     
                     <div className="flex space-x-4">
-                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-gray-400 hover:text-green-400 transition-colors hover:scale-105 transform font-mono">
+                      <a 
+                        href={project.github} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="flex items-center space-x-2 text-gray-400 hover:text-green-400 transition-colors hover:scale-105 transform font-mono"
+                        onClick={(e) => e.stopPropagation()}
+                      >
                         <Github className="h-4 w-4" />
                         <span className="text-sm">{"<code />"}</span>
                       </a>
                       {project.live && (
-                        <a href={project.live} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-gray-400 hover:text-blue-400 transition-colors hover:scale-105 transform font-mono">
+                        <a 
+                          href={project.live} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="flex items-center space-x-2 text-gray-400 hover:text-blue-400 transition-colors hover:scale-105 transform font-mono"
+                          onClick={(e) => e.stopPropagation()}
+                        >
                           <ExternalLink className="h-4 w-4" />
                           <span className="text-sm">{"<demo />"}</span>
                         </a>
@@ -162,6 +175,7 @@ const Projects = () => {
                   key={article.id}
                   className="group relative bg-gray-900/80 border border-purple-500/30 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-500 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20 animate-fade-in-up cursor-pointer"
                   style={{ animationDelay: `${index * 150}ms` }}
+                  onClick={() => window.open(article.url, '_blank')}
                 >
                   <div className="aspect-video bg-gradient-to-br from-gray-800 via-gray-900 to-black flex items-center justify-center relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-pink-500/10"></div>
@@ -186,6 +200,7 @@ const Projects = () => {
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="flex items-center space-x-2 text-gray-400 hover:text-purple-400 transition-colors hover:scale-105 transform font-mono"
+                        onClick={(e) => e.stopPropagation()}
                       >
                         <ExternalLink className="h-4 w-4" />
                         <span className="text-sm">{"<read />"}</span>

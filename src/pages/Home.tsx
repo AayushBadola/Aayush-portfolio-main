@@ -1,5 +1,5 @@
 
-import { ArrowDown, ArrowRight, Code, Terminal, Cpu, Database } from "lucide-react";
+import { ArrowRight, Code, Terminal, Cpu, Database } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -121,10 +121,6 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>
-        
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ArrowDown className="h-6 w-6 text-green-400" />
         </div>
       </div>
     </div>
