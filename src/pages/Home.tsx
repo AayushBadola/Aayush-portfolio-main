@@ -1,5 +1,5 @@
 
-import { ArrowRight, Code, Terminal, Cpu, Database } from "lucide-react";
+import { ArrowRight, Code, Terminal, Cpu, Database, Brain } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -60,17 +60,20 @@ const Home = () => {
             </p>
           </div>
 
-          {/* Tech stack showcase */}
+          {/* Tech stack showcase with better animations */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-2xl mx-auto animate-fade-in-up delay-600">
             {[
-              { icon: <Code className="w-6 h-6" />, label: "ML/AI", color: "text-green-400" },
+              { icon: <Brain className="w-6 h-6" />, label: "ML/AI", color: "text-green-400" },
               { icon: <Terminal className="w-6 h-6" />, label: "Systems", color: "text-purple-400" },
               { icon: <Cpu className="w-6 h-6" />, label: "Deep Learning", color: "text-blue-400" },
               { icon: <Database className="w-6 h-6" />, label: "Backend", color: "text-cyan-400" }
             ].map((item, index) => (
-              <div key={item.label} className="bg-gray-900/50 border border-gray-700/50 rounded-lg p-3 hover:border-green-500/50 transition-all duration-300 hover:scale-105 cursor-pointer">
-                <div className={`${item.color} mb-2 flex justify-center`}>{item.icon}</div>
-                <p className="text-gray-300 text-sm font-mono">{item.label}</p>
+              <div key={item.label} className="group bg-gray-900/50 border border-gray-700/50 rounded-lg p-3 hover:border-green-500/50 transition-all duration-300 cursor-default relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-purple-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className={`${item.color} mb-2 flex justify-center group-hover:scale-110 transition-transform duration-300 relative z-10`}>
+                  <div className="group-hover:animate-bounce">{item.icon}</div>
+                </div>
+                <p className="text-gray-300 text-sm font-mono relative z-10">{item.label}</p>
               </div>
             ))}
           </div>
@@ -92,21 +95,25 @@ const Home = () => {
               <div className="absolute w-32 h-32 bg-white/10 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none" 
                    style={{left: 'var(--mouse-x)', top: 'var(--mouse-y)'}}></div>
               <span className="relative z-10">{"<ViewProjects />"}</span>
-              <ArrowRight className="h-4 w-4 group-hover:translate-x-2 transition-transform relative z-10" />
             </Link>
             
-            <button className="group relative overflow-hidden px-8 py-4 border-2 border-purple-500 rounded-full text-purple-400 font-semibold font-mono hover:bg-purple-500/10 transition-all duration-500 transform hover:scale-110 hover:shadow-xl hover:shadow-purple-500/30 hover:border-purple-400"
-                    onMouseMove={(e) => {
-                      const rect = e.currentTarget.getBoundingClientRect();
-                      const x = e.clientX - rect.left;
-                      const y = e.clientY - rect.top;
-                      e.currentTarget.style.setProperty('--mouse-x', `${x}px`);
-                      e.currentTarget.style.setProperty('--mouse-y', `${y}px`);
-                    }}>
+            <a 
+              href="https://www.linkedin.com/in/aayushbadola/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative overflow-hidden px-8 py-4 border-2 border-purple-500 rounded-full text-purple-400 font-semibold font-mono hover:bg-purple-500/10 transition-all duration-500 transform hover:scale-110 hover:shadow-xl hover:shadow-purple-500/30 hover:border-purple-400"
+              onMouseMove={(e) => {
+                const rect = e.currentTarget.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                e.currentTarget.style.setProperty('--mouse-x', `${x}px`);
+                e.currentTarget.style.setProperty('--mouse-y', `${y}px`);
+              }}
+            >
               <div className="absolute w-24 h-24 bg-purple-500/20 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none" 
                    style={{left: 'var(--mouse-x)', top: 'var(--mouse-y)'}}></div>
-              <span className="relative z-10">{"<DownloadCV />"}</span>
-            </button>
+              <span className="relative z-10">{"<Certifications />"}</span>
+            </a>
           </div>
 
           {/* Code snippet showcase */}

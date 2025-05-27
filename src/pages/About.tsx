@@ -1,5 +1,5 @@
 
-import { Award, Code, Coffee, Users } from "lucide-react";
+import { Award, Code, Coffee, Users, BookOpen, GraduationCap } from "lucide-react";
 
 const About = () => {
   const stats = [
@@ -24,20 +24,63 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-fade-in-up delay-300">
             <p className="text-lg text-gray-300 leading-relaxed">
-              Hello! I'm Aayush Badola, a passionate B.Tech CSE student specializing in Backend Development, 
-              Machine Learning, Deep Learning, and System Design. I love creating intelligent solutions 
-              that solve real-world problems using cutting-edge technologies.
+              Hey there! 👋 I'm Aayush Badola, a passionate B.Tech CSE student who finds immense joy in the 
+              intersection of artificial intelligence and real-world problem solving. My journey began with 
+              curiosity about how machines could learn and think, and it has evolved into a deep specialization 
+              in Backend Development, Machine Learning, Deep Learning, and System Design.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
-              My journey in computer science has led me to work on diverse projects ranging from 
-              medical image classification using CNNs to exoplanet detection with machine learning algorithms. 
-              I believe in writing clean, efficient code and building systems that are both scalable and maintainable.
+              What drives me is the thrill of turning complex theoretical concepts into tangible solutions that 
+              can make a difference. Whether it's developing a CNN to classify brain tumors or creating efficient 
+              algorithms to detect exoplanets, I believe that every line of code has the potential to contribute 
+              to something meaningful. I'm constantly amazed by how data can tell stories and how models can 
+              uncover patterns invisible to the human eye.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
-              When I'm not coding, you can find me exploring new ML architectures, contributing 
-              to open-source projects, writing technical articles on Medium, or diving deep into 
-              system design concepts and backend architectures.
+              When I'm not immersed in coding or experimenting with new architectures, you'll find me writing 
+              technical articles on Medium, contributing to open-source projects, or diving deep into system 
+              design principles. My favorite book, "Skin in the Game" by Nassim Nicholas Taleb, has profoundly 
+              shaped my approach to both technology and life - emphasizing the importance of having personal 
+              stakes in what you build and believe.
             </p>
+
+            {/* Certifications Section */}
+            <div className="mt-8 p-6 bg-gradient-to-br from-purple-900/20 to-pink-900/20 rounded-lg border border-purple-500/20">
+              <div className="flex items-center gap-3 mb-4">
+                <GraduationCap className="w-6 h-6 text-purple-400" />
+                <h3 className="text-xl font-semibold text-purple-400">Certifications</h3>
+              </div>
+              <p className="text-gray-300 mb-3">
+                I hold multiple certifications from prestigious institutions including:
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {['Harvard', 'Google', 'IBM', 'Microsoft', 'LinkedIn', 'DeepLearn.AI'].map((cert) => (
+                  <span key={cert} className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm font-mono hover:bg-purple-500/30 transition-colors border border-purple-500/30">
+                    {cert}
+                  </span>
+                ))}
+              </div>
+              <a 
+                href="https://www.linkedin.com/in/aayushbadola/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mt-3 text-blue-400 hover:text-blue-300 transition-colors font-mono text-sm"
+              >
+                <span>View all on LinkedIn →</span>
+              </a>
+            </div>
+
+            {/* Favorite Book Section */}
+            <div className="mt-6 p-6 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 rounded-lg border border-blue-500/20">
+              <div className="flex items-center gap-3 mb-3">
+                <BookOpen className="w-6 h-6 text-blue-400" />
+                <h3 className="text-xl font-semibold text-blue-400">Current Favorite Book</h3>
+              </div>
+              <p className="text-gray-300 italic">
+                "Skin in the Game" by Nassim Nicholas Taleb - A book that transformed my perspective on 
+                decision-making, risk, and the importance of having personal investment in your work.
+              </p>
+            </div>
           </div>
           
           <div className="relative animate-fade-in-up delay-500">

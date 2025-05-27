@@ -101,9 +101,11 @@ const Projects = () => {
                   
                   <div className="aspect-video bg-gradient-to-br from-gray-800 via-gray-900 to-black flex items-center justify-center relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 via-purple-500/10 to-blue-500/10"></div>
-                    <div className={`w-20 h-20 bg-gradient-to-r ${project.gradient} rounded-lg flex items-center justify-center text-3xl font-bold animate-pulse relative z-10`}>
-                      {project.title.charAt(0)}
-                    </div>
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-20 h-20 object-contain relative z-10 rounded-lg"
+                    />
                     <div className="absolute bottom-2 left-2 text-xs font-mono text-green-400/60">
                       {project.featured ? "// Featured" : "// Project"}
                     </div>
