@@ -104,7 +104,7 @@ const Projects = () => {
                     <img 
                       src={project.image} 
                       alt={project.title}
-                      className="w-20 h-20 object-contain relative z-10 rounded-lg"
+                      className="w-full h-full object-cover relative z-10"
                     />
                     <div className="absolute bottom-2 left-2 text-xs font-mono text-green-400/60">
                       {project.featured ? "// Featured" : "// Project"}
