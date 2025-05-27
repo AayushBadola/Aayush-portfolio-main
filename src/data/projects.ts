@@ -1,4 +1,3 @@
-
 export interface Project {
   id: string;
   title: string;
@@ -18,6 +17,7 @@ export interface Article {
   url: string;
   date: string;
   gradient: string;
+  image: string;
 }
 
 export const projects: Project[] = [
@@ -140,7 +140,8 @@ export const articles: Article[] = [
     description: 'Exploring the revolutionary approach of self-supervised learning and its impact on modern AI systems.',
     url: 'https://medium.com/@aayush.badola2/harnessing-intrinsic-structure-the-self-supervised-learning-revolution-9d96cd012b50',
     date: '2025',
-    gradient: 'from-green-400 to-blue-500'
+    gradient: 'from-green-400 to-blue-500',
+    image: '/lovable-uploads/6617a301-2b16-4ea5-9b6d-00526808ba6c.png'
   },
   {
     id: 'transparently-complex-ai',
@@ -148,7 +149,8 @@ export const articles: Article[] = [
     description: 'Examining the balance between AI complexity and transparency in modern machine learning systems.',
     url: 'https://medium.com/@aayush.badola2/beyond-the-trade-off-transparently-complex-ai-89b955853673',
     date: '2025',
-    gradient: 'from-purple-400 to-pink-500'
+    gradient: 'from-purple-400 to-pink-500',
+    image: '/lovable-uploads/a2e7e5c0-77ec-4930-8080-fde0d330b85f.png'
   },
   {
     id: 'particles-cosmos',
@@ -156,7 +158,8 @@ export const articles: Article[] = [
     description: 'A deep dive into computational physics and the intersection of programming with cosmic phenomena.',
     url: 'https://medium.com/@aayush.badola2/particles-of-cosmos-from-trinity-to-python-06d49b6df773',
     date: '2025',
-    gradient: 'from-blue-400 to-purple-500'
+    gradient: 'from-blue-400 to-purple-500',
+    image: '/lovable-uploads/060dcdbf-d5a8-47d3-9722-87bc37aa59f8.png'
   },
   {
     id: 'silicon-mind',
@@ -164,7 +167,8 @@ export const articles: Article[] = [
     description: 'Analyzing the technical challenges and possibilities of artificial neural networks replacing biological brain functions.',
     url: 'https://medium.com/@aayush.badola2/silicon-mind-the-technical-chasm-of-ann-brain-replacement-3b175c9114c4',
     date: '2025',
-    gradient: 'from-cyan-400 to-green-500'
+    gradient: 'from-cyan-400 to-green-500',
+    image: '/lovable-uploads/bc658e14-e593-4f5c-aba2-38227811e267.png'
   },
   {
     id: 'deepseek-llm',
@@ -172,7 +176,8 @@ export const articles: Article[] = [
     description: 'Technical breakdown of the DeepSeek LLM architecture and its innovative approaches to language modeling.',
     url: 'https://medium.com/@aayush.badola2/deepseek-llm-architecture-explained-f945972c0a96',
     date: '2025',
-    gradient: 'from-red-400 to-orange-500'
+    gradient: 'from-red-400 to-orange-500',
+    image: '/lovable-uploads/cfc54862-742a-483f-8a1c-de0332d5b3d0.png'
   }
 ];
 

@@ -179,13 +179,15 @@ const Projects = () => {
                 >
                   <div className="aspect-video bg-gradient-to-br from-gray-800 via-gray-900 to-black flex items-center justify-center relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-blue-500/10 to-pink-500/10"></div>
-                    <div className={`w-20 h-20 bg-gradient-to-r ${article.gradient} rounded-lg flex items-center justify-center text-3xl font-bold relative z-10`}>
-                      <FileText className="w-10 h-10 text-white" />
-                    </div>
-                    <div className="absolute bottom-2 left-2 text-xs font-mono text-purple-400/60">
+                    <img 
+                      src={article.image} 
+                      alt={article.title}
+                      className="w-full h-full object-cover relative z-10"
+                    />
+                    <div className="absolute bottom-2 left-2 text-xs font-mono text-purple-400/60 bg-black/60 px-2 py-1 rounded">
                       // Medium Article
                     </div>
-                    <div className="absolute bottom-2 right-2 text-xs font-mono text-blue-400/60">
+                    <div className="absolute bottom-2 right-2 text-xs font-mono text-blue-400/60 bg-black/60 px-2 py-1 rounded">
                       {article.date}
                     </div>
                   </div>
