@@ -1,3 +1,4 @@
+
 export interface Project {
   id: string;
   title: string;
@@ -31,7 +32,7 @@ export const projects: Project[] = [
     gradient: 'from-red-500 to-pink-500',
     featured: true,
     category: 'ML/AI',
-    image: '/lovable-uploads/95b74e34-348f-4fe0-b007-c3d375b7fe1f.png'
+    image: '/lovable-uploads/1afda38b-7a7a-4fe5-95e2-40e009767c79.png'
   },
   {
     id: 'fetus-health',
@@ -42,7 +43,7 @@ export const projects: Project[] = [
     gradient: 'from-purple-500 to-indigo-500',
     featured: true,
     category: 'ML/AI',
-    image: '/lovable-uploads/ce44302e-a504-4b7d-b1a1-127ed9207a93.png'
+    image: '/lovable-uploads/bf2e5955-2d4c-4b89-ba95-965b04d22abe.png'
   },
   {
     id: 'exoplanet-detection',
@@ -53,7 +54,7 @@ export const projects: Project[] = [
     gradient: 'from-blue-500 to-cyan-500',
     featured: true,
     category: 'ML/AI',
-    image: '/lovable-uploads/172f8a44-e1f4-4f02-8e89-89a618240696.png'
+    image: '/lovable-uploads/99fa5058-d5ab-4d5d-ac20-f2b0c6937236.png'
   },
   {
     id: 'anomaly-detector',
@@ -64,7 +65,7 @@ export const projects: Project[] = [
     gradient: 'from-red-500 to-orange-500',
     featured: false,
     category: 'ML/AI',
-    image: '/lovable-uploads/9bc5e98f-91d4-4732-a754-2112fc3b02e8.png'
+    image: '/lovable-uploads/c226f29a-6322-4eac-b148-8f501992d868.png'
   },
   {
     id: 'hospital-system',
@@ -75,7 +76,7 @@ export const projects: Project[] = [
     gradient: 'from-green-500 to-emerald-500',
     featured: false,
     category: 'Systems',
-    image: '/lovable-uploads/39a73de8-10e4-4814-bfa4-5042f8d33537.png'
+    image: '/lovable-uploads/6f285141-6a58-4dfc-b1d9-9372335a9166.png'
   },
   {
     id: 'aquant',
@@ -97,7 +98,7 @@ export const projects: Project[] = [
     gradient: 'from-teal-500 to-blue-500',
     featured: false,
     category: 'Systems',
-    image: '/lovable-uploads/ce9e58b5-c2ca-431a-afd4-c959514a7b81.png'
+    image: '/lovable-uploads/4fd1fb65-bc82-4177-af69-9567151f33c7.png'
   },
   {
     id: 'atomix',
@@ -119,7 +120,7 @@ export const projects: Project[] = [
     gradient: 'from-slate-500 to-gray-500',
     featured: false,
     category: 'Backend',
-    image: '/lovable-uploads/f8fe5195-57c8-48aa-9759-4cd87d9b52b2.png'
+    image: '/lovable-uploads/d4a3b6f8-855d-455b-9c08-a87ac569021a.png'
   },
   {
     id: 'web-assistant',
@@ -130,7 +131,7 @@ export const projects: Project[] = [
     gradient: 'from-pink-500 to-rose-500',
     featured: false,
     category: 'Web',
-    image: '/lovable-uploads/9fa3e825-bb48-427e-9644-bcdb3854eb3c.png'
+    image: '/lovable-uploads/681d816f-9ac3-449c-987e-1baa96b37efb.png'
   },
   {
     id: 'nba-game',
@@ -141,7 +142,7 @@ export const projects: Project[] = [
     gradient: 'from-orange-500 to-red-500',
     featured: false,
     category: 'Game',
-    image: '/lovable-uploads/a53c5cfe-7451-4a76-84e2-3eba9c75cbdf.png'
+    image: '/lovable-uploads/37d9e8e5-4b54-4552-a763-51ec76fca953.png'
   }
 ];
 

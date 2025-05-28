@@ -51,10 +51,10 @@ const Home = () => {
               {"<FullStackDeveloper />"}
             </p>
             <p className="text-lg text-purple-400 mb-2 animate-fade-in-up delay-400 font-mono">
-              B.Tech CSE | 1st Year Student
+              Software Developer | ML Engineer
             </p>
             <p className="text-base text-blue-400 mb-6 max-w-3xl mx-auto animate-fade-in-up delay-500 leading-relaxed">
-              Passionate about Machine Learning, Deep Learning, and System Programming. 
+              Specializing in Machine Learning, Deep Learning, and System Programming. 
               Building intelligent solutions with Python, TensorFlow, C++, and modern web technologies. 
               From brain cancer classification to exoplanet detection - turning complex problems into elegant code.
             </p>
