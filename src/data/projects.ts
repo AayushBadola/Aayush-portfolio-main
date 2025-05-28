@@ -31,7 +31,7 @@ export const projects: Project[] = [
     gradient: 'from-red-500 to-pink-500',
     featured: true,
     category: 'ML/AI',
-    image: '/lovable-uploads/bf2e5955-2d4c-4b89-ba95-965b04d22abe.png'
+    image: '/lovable-uploads/1afda38b-7a7a-4fe5-95e2-40e009767c79.png'
   },
   {
     id: 'fetus-health',
@@ -42,7 +42,7 @@ export const projects: Project[] = [
     gradient: 'from-purple-500 to-indigo-500',
     featured: true,
     category: 'ML/AI',
-    image: '/lovable-uploads/1afda38b-7a7a-4fe5-95e2-40e009767c79.png'
+    image: '/lovable-uploads/bf2e5955-2d4c-4b89-ba95-965b04d22abe.png'
   },
   {
     id: 'exoplanet-detection',
