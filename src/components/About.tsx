@@ -15,20 +15,21 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="text-lg text-gray-300 leading-relaxed">
-              Hello! I'm Aayush, a passionate full-stack developer with a love for creating 
-              beautiful and functional web applications. I specialize in modern JavaScript 
-              frameworks and have a keen eye for design.
+              Hello! I'm Aayush, a passionate software and ML engineer specializing in 
+              Backend Development, Machine Learning, Deep Learning, and System Design. 
+              I create intelligent solutions that bridge the gap between complex AI concepts 
+              and real-world applications.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
-              With over 3 years of experience in web development, I've worked on various 
-              projects ranging from e-commerce platforms to complex web applications. 
-              I believe in writing clean, maintainable code and creating user experiences 
-              that delight and engage.
+              With expertise in developing CNN models for medical imaging, efficient algorithms 
+              for exoplanet detection, and scalable backend systems, I focus on building 
+              technology that makes a meaningful impact. I believe in writing clean, 
+              maintainable code and creating user experiences that delight and engage.
             </p>
             
             <div className="grid grid-cols-2 gap-6 mt-8">
               <div className="text-center p-6 bg-gradient-to-br from-purple-900/20 to-pink-900/20 rounded-lg border border-purple-500/20">
-                <h3 className="text-2xl font-bold text-purple-400 mb-2">50+</h3>
+                <h3 className="text-2xl font-bold text-purple-400 mb-2">15+</h3>
                 <p className="text-gray-400">Projects Completed</p>
               </div>
               <div className="text-center p-6 bg-gradient-to-br from-purple-900/20 to-pink-900/20 rounded-lg border border-purple-500/20">

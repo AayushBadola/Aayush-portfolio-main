@@ -3,8 +3,8 @@ import { Award, Code, Coffee, Users, BookOpen, GraduationCap } from "lucide-reac
 
 const About = () => {
   const stats = [
-    { icon: Code, label: "Projects Completed", value: "10+", color: "text-purple-400" },
-    { icon: Coffee, label: "Years Learning", value: "3+", color: "text-pink-400" },
+    { icon: Code, label: "Projects Completed", value: "15+", color: "text-purple-400" },
+    { icon: Coffee, label: "Years Experience", value: "3+", color: "text-pink-400" },
     { icon: Users, label: "Technologies", value: "15+", color: "text-blue-400" },
     { icon: Award, label: "Articles Written", value: "5+", color: "text-cyan-400" },
   ];
@@ -24,24 +24,15 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-fade-in-up delay-300">
             <p className="text-lg text-gray-300 leading-relaxed">
-              Hey there! 👋 I'm Aayush Badola, a passionate B.Tech CSE student who finds immense joy in the 
-              intersection of artificial intelligence and real-world problem solving. My journey began with 
-              curiosity about how machines could learn and think, and it has evolved into a deep specialization 
-              in Backend Development, Machine Learning, Deep Learning, and System Design.
+              Hey there! 👋 I'm Aayush Badola, a passionate software and ML engineer who specializes in 
+              Backend Development, Machine Learning, Deep Learning, and System Design. I find immense joy 
+              in turning complex AI concepts into practical solutions that solve real-world problems.
             </p>
             <p className="text-lg text-gray-300 leading-relaxed">
-              What drives me is the thrill of turning complex theoretical concepts into tangible solutions that 
-              can make a difference. Whether it's developing a CNN to classify brain tumors or creating efficient 
-              algorithms to detect exoplanets, I believe that every line of code has the potential to contribute 
-              to something meaningful. I'm constantly amazed by how data can tell stories and how models can 
-              uncover patterns invisible to the human eye.
-            </p>
-            <p className="text-lg text-gray-300 leading-relaxed">
-              When I'm not immersed in coding or experimenting with new architectures, you'll find me writing 
-              technical articles on Medium, contributing to open-source projects, or diving deep into system 
-              design principles. My favorite book, "Skin in the Game" by Nassim Nicholas Taleb, has profoundly 
-              shaped my approach to both technology and life - emphasizing the importance of having personal 
-              stakes in what you build and believe.
+              My expertise spans developing CNN models for brain tumor classification, creating efficient 
+              algorithms for exoplanet detection, and building scalable backend systems. I believe that 
+              every line of code has the potential to contribute to something meaningful, whether it's 
+              uncovering patterns in data or creating systems that can make a difference.
             </p>
 
             {/* Certifications Section */}
