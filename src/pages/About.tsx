@@ -24,7 +24,7 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6 animate-fade-in-up delay-300">
             <p className="text-lg text-gray-300 leading-relaxed">
-              Hey there! 👋 I'm Aayush Badola, a passionate software and ML engineer who specializes in 
+              Hey there! 👋 I'm Aayush Badola, a software and ML engineer who specializes in 
               Backend Development, Machine Learning, Deep Learning, and System Design. I find immense joy 
               in turning complex AI concepts into practical solutions that solve real-world problems.
             </p>
