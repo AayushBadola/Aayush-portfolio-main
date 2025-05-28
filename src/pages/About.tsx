@@ -3,7 +3,7 @@ import { Award, Code, Coffee, Users, BookOpen, GraduationCap } from "lucide-reac
 
 const About = () => {
   const stats = [
-    { icon: Code, label: "Projects Completed", value: "15+", color: "text-purple-400" },
+    { icon: Code, label: "Projects Completed", value: "10+", color: "text-purple-400" },
     { icon: Coffee, label: "Years Experience", value: "3+", color: "text-pink-400" },
     { icon: Users, label: "Technologies", value: "15+", color: "text-blue-400" },
     { icon: Award, label: "Articles Written", value: "5+", color: "text-cyan-400" },
