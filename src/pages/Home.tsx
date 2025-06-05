@@ -60,18 +60,18 @@ const Home = () => {
             </p>
           </div>
 
-          {/* Tech stack showcase with better animations */}
+          {/* Tech stack showcase with continuous animations */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-2xl mx-auto animate-fade-in-up delay-600">
             {[
-              { icon: <Brain className="w-6 h-6" />, label: "ML/AI", color: "text-green-400" },
-              { icon: <Terminal className="w-6 h-6" />, label: "Systems", color: "text-purple-400" },
-              { icon: <Cpu className="w-6 h-6" />, label: "Deep Learning", color: "text-blue-400" },
-              { icon: <Database className="w-6 h-6" />, label: "Backend", color: "text-cyan-400" }
+              { icon: <Brain className="w-6 h-6" />, label: "ML/AI", color: "text-green-400", animation: "animate-pulse" },
+              { icon: <Terminal className="w-6 h-6" />, label: "Systems", color: "text-purple-400", animation: "animate-bounce" },
+              { icon: <Cpu className="w-6 h-6" />, label: "Deep Learning", color: "text-blue-400", animation: "animate-pulse" },
+              { icon: <Database className="w-6 h-6" />, label: "Backend", color: "text-cyan-400", animation: "animate-bounce" }
             ].map((item, index) => (
               <div key={item.label} className="group bg-gray-900/50 border border-gray-700/50 rounded-lg p-3 hover:border-green-500/50 transition-all duration-300 cursor-default relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-purple-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className={`${item.color} mb-2 flex justify-center group-hover:scale-110 transition-transform duration-300 relative z-10`}>
-                  <div className="group-hover:animate-bounce">{item.icon}</div>
+                  <div className={`${item.animation}`} style={{ animationDelay: `${index * 500}ms`, animationDuration: '2s' }}>{item.icon}</div>
                 </div>
                 <p className="text-gray-300 text-sm font-mono relative z-10">{item.label}</p>
               </div>
