@@ -1,11 +1,21 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ExternalLink, Github, Star, Code, Brain, Rocket, Gamepad2, Server, FileText, Filter } from "lucide-react";
 import { projects, articles, getProjectsByCategory } from "../data/projects";
+import { useSearchParams } from "react-router-dom";
 
 const Projects = () => {
-  const [activeCategory, setActiveCategory] = useState('All');
+  const [searchParams] = useSearchParams();
+  const categoryFromUrl = searchParams.get('category');
+  const [activeCategory, setActiveCategory] = useState(categoryFromUrl || 'All');
   const [showArticles, setShowArticles] = useState(false);
+  
+  // Update active category when URL parameter changes
+  useEffect(() => {
+    if (categoryFromUrl) {
+      setActiveCategory(categoryFromUrl);
+    }
+  }, [categoryFromUrl]);
   
   const categories = ['All', 'ML/AI', 'Systems', 'Backend', 'Web', 'Game'];
   const filteredProjects = getProjectsByCategory(activeCategory);

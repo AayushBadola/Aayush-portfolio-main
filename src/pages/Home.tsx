@@ -1,8 +1,14 @@
 
 import { ArrowRight, Code, Terminal, Cpu, Database, Brain } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const handleTechStackClick = (category: string) => {
+    navigate(`/projects?category=${category}`);
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
       {/* Enhanced animated background with coding theme */}
@@ -63,12 +69,16 @@ const Home = () => {
           {/* Tech stack showcase with elegant rotating animations */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-2xl mx-auto animate-fade-in-up delay-600">
             {[
-              { icon: <Brain className="w-6 h-6" />, label: "ML/AI", color: "text-green-400", haloColor: "border-green-400/40" },
-              { icon: <Terminal className="w-6 h-6" />, label: "Systems", color: "text-purple-400", haloColor: "border-purple-400/40" },
-              { icon: <Cpu className="w-6 h-6" />, label: "Deep Learning", color: "text-blue-400", haloColor: "border-blue-400/40" },
-              { icon: <Database className="w-6 h-6" />, label: "Backend", color: "text-cyan-400", haloColor: "border-cyan-400/40" }
+              { icon: <Brain className="w-6 h-6" />, label: "ML/AI", color: "text-green-400", haloColor: "border-green-400/40", category: "ML/AI" },
+              { icon: <Terminal className="w-6 h-6" />, label: "Systems", color: "text-purple-400", haloColor: "border-purple-400/40", category: "Systems" },
+              { icon: <Cpu className="w-6 h-6" />, label: "Deep Learning", color: "text-blue-400", haloColor: "border-blue-400/40", category: "ML/AI" },
+              { icon: <Database className="w-6 h-6" />, label: "Backend", color: "text-cyan-400", haloColor: "border-cyan-400/40", category: "Backend" }
             ].map((item, index) => (
-              <div key={item.label} className="group bg-gray-900/50 border border-gray-700/50 rounded-lg p-3 hover:border-green-500/50 transition-all duration-300 cursor-default relative overflow-hidden">
+              <div 
+                key={item.label} 
+                className="group bg-gray-900/50 border border-gray-700/50 rounded-lg p-3 hover:border-green-500/50 transition-all duration-300 cursor-pointer relative overflow-hidden hover:scale-105 transform"
+                onClick={() => handleTechStackClick(item.category)}
+              >
                 {/* Multiple rotating rings for sophisticated effect */}
                 <div 
                   className={`absolute inset-0 rounded-lg border-2 ${item.haloColor} opacity-30`}
