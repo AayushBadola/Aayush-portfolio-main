@@ -1,3 +1,4 @@
+
 import { ArrowRight, Code, Terminal, Cpu, Database, Brain } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -59,22 +60,40 @@ const Home = () => {
             </p>
           </div>
 
-          {/* Tech stack showcase with subtle halo animations */}
+          {/* Tech stack showcase with elegant rotating animations */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-2xl mx-auto animate-fade-in-up delay-600">
             {[
-              { icon: <Brain className="w-6 h-6" />, label: "ML/AI", color: "text-green-400", haloColor: "border-green-400/30" },
-              { icon: <Terminal className="w-6 h-6" />, label: "Systems", color: "text-purple-400", haloColor: "border-purple-400/30" },
-              { icon: <Cpu className="w-6 h-6" />, label: "Deep Learning", color: "text-blue-400", haloColor: "border-blue-400/30" },
-              { icon: <Database className="w-6 h-6" />, label: "Backend", color: "text-cyan-400", haloColor: "border-cyan-400/30" }
+              { icon: <Brain className="w-6 h-6" />, label: "ML/AI", color: "text-green-400", haloColor: "border-green-400/40" },
+              { icon: <Terminal className="w-6 h-6" />, label: "Systems", color: "text-purple-400", haloColor: "border-purple-400/40" },
+              { icon: <Cpu className="w-6 h-6" />, label: "Deep Learning", color: "text-blue-400", haloColor: "border-blue-400/40" },
+              { icon: <Database className="w-6 h-6" />, label: "Backend", color: "text-cyan-400", haloColor: "border-cyan-400/40" }
             ].map((item, index) => (
               <div key={item.label} className="group bg-gray-900/50 border border-gray-700/50 rounded-lg p-3 hover:border-green-500/50 transition-all duration-300 cursor-default relative overflow-hidden">
-                {/* Rotating halo effect */}
+                {/* Multiple rotating rings for sophisticated effect */}
                 <div 
-                  className={`absolute inset-0 rounded-lg border-2 ${item.haloColor} opacity-60`}
+                  className={`absolute inset-0 rounded-lg border-2 ${item.haloColor} opacity-30`}
                   style={{
-                    animation: `spin ${8 + index * 2}s linear infinite`,
+                    animation: `spin ${12 + index * 3}s linear infinite`,
                     borderStyle: 'dashed',
-                    animationDelay: `${index * 1000}ms`
+                    animationDelay: `${index * 800}ms`
+                  }}
+                ></div>
+                
+                <div 
+                  className={`absolute inset-1 rounded-lg border ${item.haloColor} opacity-50`}
+                  style={{
+                    animation: `spin ${8 + index * 2}s linear infinite reverse`,
+                    borderStyle: 'dotted',
+                    animationDelay: `${index * 1200}ms`
+                  }}
+                ></div>
+                
+                <div 
+                  className={`absolute -inset-1 rounded-lg border-2 ${item.haloColor} opacity-20`}
+                  style={{
+                    animation: `spin ${16 + index * 4}s linear infinite`,
+                    borderStyle: 'solid',
+                    animationDelay: `${index * 600}ms`
                   }}
                 ></div>
                 
