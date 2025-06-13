@@ -1,4 +1,5 @@
 
+
 import { ArrowRight, Code, Terminal, Cpu, Database, Brain } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 
@@ -136,7 +137,7 @@ const Home = () => {
             </Link>
             
             <a 
-              href="https://www.linkedin.com/in/aayushbadola/"
+              href="https://www.linkedin.com/in/aayushbadola/details/certifications/"
               target="_blank"
               rel="noopener noreferrer"
               className="group relative overflow-hidden px-8 py-4 border-2 border-purple-500 rounded-full text-purple-400 font-semibold font-mono hover:bg-purple-500/10 transition-all duration-500 transform hover:scale-110 hover:shadow-xl hover:shadow-purple-500/30 hover:border-purple-400"
@@ -173,3 +174,4 @@ const Home = () => {
 };
 
 export default Home;
+
